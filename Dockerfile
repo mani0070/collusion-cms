@@ -1,4 +1,4 @@
-FROM node:9.11.1-alpine
+FROM node:10.7.0-alpine
 
 LABEL maintainer="Luca Perret <perret.luca@gmail.com>" \
       org.label-schema.vendor="Strapi" \
@@ -11,7 +11,7 @@ LABEL maintainer="Luca Perret <perret.luca@gmail.com>" \
 
 WORKDIR /usr/src/api
 
-RUN npm install -g strapi@3.0.0-alpha.12.2
+RUN npm install -g strapi@3.0.0-alpha.13.0.1
 
 COPY strapi.sh ./
 RUN chmod +x ./strapi.sh
@@ -19,7 +19,7 @@ RUN chmod +x ./strapi.sh
 EXPOSE 1337
 
 COPY healthcheck.js ./
-HEALTHCHECK --interval=15s --timeout=5s --start-period=30s \
+HEALTHCHECK --interval=15s --timeout=60s --start-period=60s \
       CMD node /usr/src/api/healthcheck.js
 
 CMD ["./strapi.sh"]

@@ -2,21 +2,19 @@ version: '3'
 
 services:
   api:
-    image: strapi/strapi
+    build: .
+    restart: always
+    privileged: true
     environment:
-      - DATABASE_AUTHENTICATION
       - APP_NAME
       - DATABASE_CLIENT
-      - DATABASE_ENABLE_SSL
       - DATABASE_HOST
       - DATABASE_PORT
       - DATABASE_NAME
       - DATABASE_USERNAME
       - DATABASE_PASSWORD
-      - HOST
     ports:
       - 1337:1337
     volumes:
       - ./strapi-app:/usr/src/api/strapi-app
-      #- /usr/src/api/strapi-app/node_modules
-    restart: always
+      # - /usr/src/api/strapi-app/node_modules

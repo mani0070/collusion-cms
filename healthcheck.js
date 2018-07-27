@@ -5,7 +5,7 @@ const options = {
     port : "1337",
     path: "/_health",
     method: "HEAD",
-    timeout : 2000
+    timeout : 6000
 };
 
 const request = http.get(options, (res) => {

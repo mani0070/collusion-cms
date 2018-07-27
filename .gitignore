@@ -106,3 +106,4 @@ coverage
 # Env file
 ############################
 .env
+strapi-app
