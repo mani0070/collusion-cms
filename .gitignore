@@ -102,8 +102,5 @@ node_modules
 testApp
 coverage
 
-############################
-# Env file
-############################
-.env
+.env*
 strapi-app
