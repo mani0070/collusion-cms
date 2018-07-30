@@ -23,6 +23,10 @@ then
     strapi new $APP_NAME --dbclient=$DATABASE_CLIENT --dbhost=$DATABASE_HOST --dbport=$DATABASE_PORT --dbname=$DATABASE_NAME --dbusername=$DATABASE_USERNAME --dbpassword=$DATABASE_PASSWORD
 fi
 
+# replace database configs from strapi - there's a bug 
+cat database.json > $APP_NAME/config/environments/production/database.json
+cat database.json > $APP_NAME/config/environments/staging/database.json
+
 cd $APP_NAME
 strapi start &
 

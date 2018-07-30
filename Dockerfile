@@ -19,6 +19,8 @@ RUN chmod +x ./strapi.sh
 EXPOSE 1337
 
 COPY healthcheck.js ./
+COPY database.json ./
+
 HEALTHCHECK --interval=15s --timeout=60s --start-period=60s \
       CMD node /usr/src/api/healthcheck.js
 
