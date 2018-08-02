@@ -9,26 +9,23 @@ _stopStrapi() {
 
 trap _stopStrapi SIGTERM SIGINT
 
-APP_NAME=${APP_NAME}
-DATABASE_AUTHENTICATION=${AUTHENTICATION_DATABASE}
-DATABASE_ENABLE_SSL=${DATABASE_ENABLE_SSL}
-DATABASE_CLIENT=${DATABASE_CLIENT}
-DATABASE_HOST=${DATABASE_HOST}
-DATABASE_PORT=${DATABASE_PORT}
-DATABASE_NAME=${DATABASE_NAME}
+# if [ ! -f "$APP_NAME/package.json" ]
+# then
+#     strapi -v
+#     strapi new $APP_NAME --dbclient=$DATABASE_CLIENT --dbhost=$DATABASE_HOST --dbport=$DATABASE_PORT --dbname=$DATABASE_NAME --dbusername=$DATABASE_USERNAME --dbpassword=$DATABASE_PASSWORD
+# fi
+#
+# # replace database configs from strapi - there's a bug
+# cp database.json $APP_NAME/config/environments/production/database.json
+# cp database.json $APP_NAME/config/environments/staging/database.json
+# cp database.json $APP_NAME/config/environments/development/database.json
 
-if [ ! -f "$APP_NAME/package.json" ]
-then
-    strapi -v
-    strapi new $APP_NAME --dbclient=$DATABASE_CLIENT --dbhost=$DATABASE_HOST --dbport=$DATABASE_PORT --dbname=$DATABASE_NAME --dbusername=$DATABASE_USERNAME --dbpassword=$DATABASE_PASSWORD
-fi
-
-# replace database configs from strapi - there's a bug 
-cat database.json > $APP_NAME/config/environments/production/database.json
-cat database.json > $APP_NAME/config/environments/staging/database.json
+# cp server.js $APP_NAME/server.js
 
 cd $APP_NAME
-strapi start &
 
-strapiPID=$!
+npm install
+
+npm run start & strapiPID=$!
+
 wait "$strapiPID"

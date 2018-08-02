@@ -1,14 +1,29 @@
 # Collusion CMS
 
-Our CMS is dockerised so please install docker first - https://www.docker.com/get-docker
+Our CMS is available as a docker image.
 
-## How to Install locally
+You will need to have [docker](https://www.docker.com/community-edition#/download) installed and running on you machine to develop this project.
 
-```bash
-docker-compose build --no-cache api && docker-compose up
-```
 
-I like rebuilding the container when I make edits to the Dockerfile as its getting cached but feel free to ommit the build command after the first build.
+## Local Development
+
+#### Spin up
+
+Build and run a development environment
+
+    $ docker-compose up -d
+
+#### Spin down
+
+Stop a development environment
+
+    $ docker-compose stop
+
+#### Remove images
+
+Delete all images associated development environment
+
+    $ docker-compose down --rmi all
 
 ## Environment variables
 
