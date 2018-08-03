@@ -13,6 +13,8 @@ Build and run a development environment
 
     $ docker-compose up -d
 
+    $ docker-compose up --build -d
+
 #### Spin down
 
 Stop a development environment
