@@ -27,11 +27,11 @@ Delete all images associated development environment
 
 ## Environment variables
 
-- `APP_NAME` to override the `strapi-app` generated folder name (you should also update the volumes paths).
+- `ADMIN_PATH` set the path for access to the CMS admin.
 - `DATABASE_CLIENT` a database providers supported by Strapi: MongoDB, Postgres, MySQL, Sqlite3 and Redis.
 - `DATABASE_HOST` database service name.
 - `DATABASE_PORT` depends on your database client.
-- `DATABASE_NAME` initializes a database with specific name (default strapi). When using MongoDB, you should also update the `MONGO_INITDB_DATABASE` environment in the db service.
+- `DATABASE_NAME` initialises a database with specific name (default strapi). When using MongoDB, you should also update the `MONGO_INITDB_DATABASE` environment in the db service.
 - `DATABASE_USERNAME` set the username of the database connection.
 - `DATABASE_PASSWORD` set the password of the database connection.
-- `NODE_ENV` the node environment - it can be `production`, `staging` or `development`. In the production you're not able to create/edit a Content-type.
+- `NODE_ENV` the node environment - it can be `production`, `staging` or `development`. In production you're not able to create/edit a Content-type.
