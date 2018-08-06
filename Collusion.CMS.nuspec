@@ -10,5 +10,7 @@
         <description>CMS application deployment</description>
         <language>en-gb</language>
     </metadata>
-    <files></files>
+    <files>
+	<file src="app\**\*.*"/>
+    </files>
 </package>
