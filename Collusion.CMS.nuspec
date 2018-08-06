@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Collusion.CMS</id>
+        <version>1.0.0</version>
+        <title>Collusion.CMS</title>
+        <authors>Collusion</authors>
+        <owners>Collusion.com</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>CMS application deployment</description>
+        <language>en-gb</language>
+    </metadata>
+    <files>
+	<file src="app\**\*.*"/>
+    </files>
+</package>

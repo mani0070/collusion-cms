@@ -1,13 +1,11 @@
 FROM node:10.7.0-alpine
 
-LABEL maintainer="Luca Perret <perret.luca@gmail.com>" \
-      org.label-schema.vendor="Strapi" \
-      org.label-schema.name="Strapi Docker image" \
-      org.label-schema.description="Strapi containerized" \
-      org.label-schema.url="https://strapi.io" \
-      org.label-schema.vcs-url="https://github.com/strapi/strapi-docker" \
-      org.label-schema.version=latest \
-      org.label-schema.schema-version="1.0"
+LABEL maintainer="Collusion Tech" \
+      org.label-schema.vendor="Colluion" \
+      org.label-schema.name="Collusion CMS Docker image" \
+      org.label-schema.vcs-url="https://github.com/CollusionStudios/collusion-cms"
+
+RUN mkdir -p /usr/src/api
 
 WORKDIR /usr/src/api
 
@@ -18,10 +16,10 @@ RUN chmod +x ./strapi.sh
 
 EXPOSE 1337
 
-COPY healthcheck.js ./
-COPY database.json ./
+COPY healthcheck.js /usr/local/bin/healthcheck.js
+COPY app /usr/src/api/
 
 HEALTHCHECK --interval=15s --timeout=60s --start-period=60s \
-      CMD node /usr/src/api/healthcheck.js
+      CMD node /usr/local/bin/healthcheck.js
 
 CMD ["./strapi.sh"]

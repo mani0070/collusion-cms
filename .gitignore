@@ -103,4 +103,3 @@ testApp
 coverage
 
 .env*
-strapi-app
