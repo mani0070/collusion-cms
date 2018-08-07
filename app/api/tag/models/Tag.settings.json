@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "tag",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "publish": {
+      "type": "boolean"
+    },
+    "products": {
+      "collection": "product",
+      "via": "tag"
+    },
+    "drops": {
+      "collection": "drop",
+      "via": "tag"
+    }
+  }
+}

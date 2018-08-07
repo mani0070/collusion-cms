@@ -1,1 +1,47 @@
-{}
+{
+  "tag": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "publish": {
+        "appearance": ""
+      }
+    }
+  },
+  "product": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": "WYSIWYG"
+      },
+      "category": {
+        "appearance": ""
+      },
+      "sku": {
+        "appearance": ""
+      },
+      "price": {
+        "appearance": ""
+      },
+      "videoId": {
+        "appearance": ""
+      }
+    }
+  },
+  "drop": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "releaseDate": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": "WYSIWYG"
+      }
+    }
+  }
+}

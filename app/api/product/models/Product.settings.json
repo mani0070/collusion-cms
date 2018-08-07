@@ -1,0 +1,72 @@
+{
+  "connection": "default",
+  "collectionName": "products",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Tops",
+        "Bottoms",
+        "Desses"
+      ]
+    },
+    "sku": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "json",
+      "default": {
+        "current": {
+          "value": 0,
+          "text": "£0.00"
+        },
+        "previous": {
+          "value": 0,
+          "text": "£0.00"
+        },
+        "rrp": {
+          "value": 0,
+          "text": "£0.00"
+        },
+        "xrp": {
+          "value": 0,
+          "text": "£0.00"
+        }
+      }
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "videoId": {
+      "type": "string"
+    },
+    "tag": {
+      "model": "tag",
+      "via": "products"
+    },
+    "drop": {
+      "model": "drop",
+      "via": "products"
+    }
+  }
+}
