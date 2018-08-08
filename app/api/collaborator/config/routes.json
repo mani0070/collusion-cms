@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/collaborator",
+      "handler": "Collaborator.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/collaborator/count",
+      "handler": "Collaborator.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/collaborator/:id",
+      "handler": "Collaborator.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/collaborator",
+      "handler": "Collaborator.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/collaborator/:id",
+      "handler": "Collaborator.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/collaborator/:id",
+      "handler": "Collaborator.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/collaborator/:id/relationships/:relation",
+      "handler": "Collaborator.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/collaborator/:id/relationships/:relation",
+      "handler": "Collaborator.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/collaborator/:id/relationships/:relation",
+      "handler": "Collaborator.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

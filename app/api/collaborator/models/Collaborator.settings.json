@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "drops",
+  "collectionName": "collaborators",
   "info": {
-    "name": "drop",
+    "name": "collaborator",
     "description": ""
   },
   "options": {
@@ -19,26 +19,25 @@
       "type": "text",
       "required": true
     },
-    "releaseDate": {
-      "type": "date",
-      "required": true
-    },
-    "image": {
-      "model": "file",
+    "images": {
+      "collection": "file",
       "via": "related",
       "plugin": "upload"
     },
-    "tag": {
-      "model": "tag",
-      "via": "drops"
+    "videoId": {
+      "type": "string"
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "collaborator"
+    },
+    "drops": {
+      "collection": "drop",
+      "via": "collaborator"
     },
     "products": {
       "collection": "product",
-      "via": "drop"
-    },
-    "collaborator": {
-      "model": "collaborator",
-      "via": "drops"
+      "via": "collaborator"
     }
   }
 }

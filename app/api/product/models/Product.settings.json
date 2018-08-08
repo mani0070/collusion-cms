@@ -67,6 +67,10 @@
     "drop": {
       "model": "drop",
       "via": "products"
+    },
+    "collaborator": {
+      "model": "collaborator",
+      "via": "products"
     }
   }
 }

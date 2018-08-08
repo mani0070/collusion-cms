@@ -26,6 +26,10 @@
     "drops": {
       "collection": "drop",
       "via": "tag"
+    },
+    "collaborator": {
+      "model": "collaborator",
+      "via": "tags"
     }
   }
 }
