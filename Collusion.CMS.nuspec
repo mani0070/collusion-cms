@@ -12,6 +12,5 @@
     </metadata>
     <files>
 	     <file src="app\**\*.*"/>
-       <file src="app\.deployment"/>
     </files>
 </package>
